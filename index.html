@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Marketplace</h1>
+    <button id="connectWallet">Connect Wallet</button>
+    <h2>List an Item</h2>
+    <input type="text" id="title" placeholder="Title">
+    <input type="text" id="description" placeholder="Description">
+    <input type="number" id="price" placeholder="Price in Wei">
+    <button id="listItemButton">List Item</button>
+    <h2>Available Items</h2>
+    <button id="showAvailableItemsButton">Show Available Items</button>
+    <ul id="itemsList"></ul>
+    <h2>Sold Items</h2>
+    <button id="showSoldItemsButton">Show Sold Items</button>
+    <ul id="soldItemsList"></ul>
+    <h2>Buy Item</h2>
+    <input type="number" id="itemIdToBuy" placeholder="Item ID">
+    <button id="buyItemButton">Buy Item</button>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.6.1/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+        document.getElementById('showAvailableItemsButton').onclick = renderItems;
+    </script>
+</body>
+</html>
